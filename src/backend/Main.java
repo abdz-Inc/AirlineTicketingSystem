@@ -9,9 +9,10 @@ public class Main {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection conn = DriverManager.getConnection(
-			  "jdbc:mysql://aws.connect.psdb.cloud/airlinedb?sslMode=PREFERRED",
-			  "1x82pvabjvaridc7a8eu",
-			  "pscale_pw_81vJhr0qLV7xs2IlhXUPupc5zjIFaB3Nx6igXE4otjK");
+				${{ secrets.HOST_NAME }},
+			  ${{ secrets.USER }},
+			  ${{ secrets.PASSWORD }}
+			);
 			
 			int uid = 110;
 			String name = "admin1";
